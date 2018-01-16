@@ -3,13 +3,18 @@
 
   require '../vendor/core/Router.php';
   require '../vendor/libs/functions.php';
+  require '../app/controllers/Main.php';
+  require '../app/controllers/Post.php';    
 
-  Router::add('posts/new', ['controller'=>'posts', 'action'=>'add']);
 
-  debug(Router::getRoutes());
+  Router::add('^$', ['controller'=>'posts', 'action'=>'add']);
+  Router::add('^(?P<controller>[a-z-]+)/?(?P<action>[a-z-]+)?$');
 
-  if(Router::matchRoute($query)){
-    debug(Router::getRoute());
-  }else{
-    echo "404";
-  }
+  // debug(Router::getRoutes());
+
+  Router::dispatch($query);
+  // if(Router::matchRoute($query)){
+  //   debug(Router::getRoute());
+  // }else{
+  //   echo "404";
+  // }
