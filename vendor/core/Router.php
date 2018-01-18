@@ -23,6 +23,8 @@
       return self::$route;
     }
 
+
+
     public static function matchRoute($url)
     {
       foreach(self::$routes as $pattern => $route){
@@ -37,16 +39,21 @@
             $route['action'] = 'index';
           }
           self::$route = $route;
+          debug(self::$route);
           return true;
         }
       }
       return false;
     }
 
+
+
     public static function dispatch($url)
     {
       if(self::matchRoute($url)){
+
         $controller = self::$route['controller'];
+
         if(class_exists($controller)){
           echo "ok";
         }else{

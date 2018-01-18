@@ -5,7 +5,7 @@
    */
   class Posts {
 
-    function __construct(argument)
+    function __construct()
     {
       # code...
     }
