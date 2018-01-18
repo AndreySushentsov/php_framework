@@ -5,8 +5,19 @@
    */
   class Posts {
 
-    function __construct()
+    public function index()
     {
-      # code...
+      echo "Posts::index";
     }
+
+    public function test()
+    {
+      echo "Posts::test";
+    }
+
+    public function testPage()
+    {
+      echo "Posts::testPage";
+    }
+
   }

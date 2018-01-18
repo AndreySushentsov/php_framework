@@ -52,17 +52,34 @@
     {
       if(self::matchRoute($url)){
 
-        $controller = self::$route['controller'];
+        $controller = self::upperCamelCase(self::$route['controller']);
 
         if(class_exists($controller)){
-          echo "ok";
+          $cObj = new $controller;
+          $action = self::$route['action'];
+
+          if(method_exists($cObj, $action)){
+            $cObj->$action();
+          }else{
+              echo "action ".$action." not found";
+          }
         }else{
-          echo "controller".$controller."not found";
+          echo "controller ".$controller." not found";
         }
       }else{
         http_response_code(404);
         include '404.html';
       }
+    }
+
+
+    protected static function upperCamelCase($name)
+    {
+      $name = str_replace('-',' ', $name);
+      $name = ucwords($name);
+      $name = str_replace(' ','', $name);
+
+      return $name;
     }
 
   }

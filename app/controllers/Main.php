@@ -5,8 +5,9 @@
    */
   class Main {
 
-    function __construct()
+    public function index()
     {
-      # code...
+      echo "Main::index";
     }
+    
   }
