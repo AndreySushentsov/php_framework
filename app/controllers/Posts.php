@@ -1,9 +1,11 @@
 <?php
-
+  namespace app\controllers;
+  namespace vendor\core\base;
   /**
    *
    */
-  class Posts {
+  class Posts extends Controller{
+
 
     public function indexAction()
     {
