@@ -56,7 +56,8 @@
 
         if(class_exists($controller)){
           $cObj = new $controller;
-          $action = self::$route['action'];
+          $action = self::lowerCamelCase(self::$route['action']) . 'Action';
+
 
           if(method_exists($cObj, $action)){
             $cObj->$action();
@@ -78,6 +79,14 @@
       $name = str_replace('-',' ', $name);
       $name = ucwords($name);
       $name = str_replace(' ','', $name);
+
+      return $name;
+    }
+
+    protected static function lowerCamelCase($name)
+    {
+
+      $name = lcfirst(self::upperCamelCase($name));
 
       return $name;
     }

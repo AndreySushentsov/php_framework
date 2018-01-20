@@ -5,9 +5,9 @@
    */
   class Main {
 
-    public function index()
+    public function indexAction()
     {
       echo "Main::index";
     }
-    
+
   }

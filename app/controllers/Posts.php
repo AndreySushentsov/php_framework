@@ -5,7 +5,7 @@
    */
   class Posts {
 
-    public function index()
+    public function indexAction()
     {
       echo "Posts::index";
     }
@@ -15,7 +15,7 @@
       echo "Posts::test";
     }
 
-    public function testPage()
+    public function testPageAction()
     {
       echo "Posts::testPage";
     }
