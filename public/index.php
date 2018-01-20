@@ -30,7 +30,7 @@
   Router::add('^$', ['controller'=>'posts', 'action'=>'index']);
   Router::add('^(?P<controller>[a-z-]+)/?(?P<action>[a-z-]+)?$');
 
-  debug(Router::getRoutes());
+  // debug(Router::getRoutes());
 
   Router::dispatch($query);
   // if(Router::matchRoute($query)){

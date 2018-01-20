@@ -1,10 +1,10 @@
 <?php
   namespace app\controllers;
-  namespace vendor\core\base;
+  // namespace vendor\core\base;
   /**
    *
    */
-  class Posts extends Controller{
+  class Posts extends \vendor\core\base\Controller{
 
 
     public function indexAction()

@@ -8,7 +8,7 @@
    */
   abstract class Controller
   {
-    $route = [];
+    public $route = [];
 
     public function __construct($route)
     {
