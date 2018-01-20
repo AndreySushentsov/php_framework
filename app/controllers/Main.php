@@ -3,11 +3,18 @@
   /**
    *
    */
-  class Main extends \vendor\core\base\Controller{
+  class Main extends App{
+
+    public $layout = 'main';
+
 
     public function indexAction()
     {
-      echo "Main::index";
+      // $this->layout = false;
+      // $this->layout = 'main';
+      $this->view = 'test';
+      $name = 'My Name';
+      $this->set(['name'=>$name]);
     }
 
   }

@@ -63,6 +63,7 @@
 
           if(method_exists($cObj, $action)){
             $cObj->$action();
+            $cObj->getView();
           }else{
               echo "action ".$action." not found";
           }

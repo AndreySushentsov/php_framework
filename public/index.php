@@ -7,6 +7,7 @@
   define('CORE', dirname(__DIR__) . '/vendor/core');
   define('ROOT', dirname(__DIR__));
   define('APP', dirname(__DIR__) . '/app');
+  define('LAYOUT', 'default');
 
   // require '../vendor/core/Router.php';
   require '../vendor/libs/functions.php';
@@ -17,7 +18,6 @@
 
       $file = ROOT . '/' . str_replace('\\', '/', $class) . '.php';
 
-      // $file = APP. "/controllers/$class.php";
       if(is_file($file)){
         require_once $file;
       }
