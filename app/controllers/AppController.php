@@ -3,7 +3,7 @@
   /**
    *
    */
-  class App extends \vendor\core\base\Controller
+  class AppController extends \vendor\core\base\Controller
   {
 
   }

@@ -4,10 +4,10 @@
   /**
    *
    */
-  class Page extends App{
+  class PageController extends AppController{
 
     public function viewAction(){
-      
+
     }
 
   }
