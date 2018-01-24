@@ -60,10 +60,6 @@
       </nav>
     </header>
     <main class="container">
-      <div class="jumbotron">
-        <h1><?=$name ?></h1>
-        <p>on my own PHP framework.</p>
-      </div>
       <?=$content ?>
     </main>
     <footer>

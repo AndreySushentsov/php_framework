@@ -1,5 +1,5 @@
 <?php
-  namespace classes;
+  namespace vendor\libs;
 
   /**
    *
@@ -9,6 +9,6 @@
 
     function __construct()
     {
-      echo "Test Class";
+      // echo "Test Class";
     }
   }
