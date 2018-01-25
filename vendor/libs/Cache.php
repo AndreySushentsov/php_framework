@@ -15,12 +15,12 @@
     {
       $content['data'] = $data;
       $content['end_time'] = time() + $seconds;
-
+      var_dump($key);
       if(file_put_contents(CACHE . '/' . md5($key) . '.txt', serialize($content))){
-        return true;
+        echo "true";
       }else
       {
-        return false;
+        echo "false";
       }
     }
 
