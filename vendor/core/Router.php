@@ -65,14 +65,17 @@
             $cObj->$action();
             $cObj->getView();
           }else{
-              echo "action ".$action." not found";
+              // echo "action ".$action." not found";
+              throw new \Exception('Action' . $action . 'not found', 404);
           }
         }else{
-          echo "controller ".$controller." not found";
+          // echo "controller ".$controller." not found";
+          throw new \Exception('Controller' . $controller . 'not found', 404);
         }
       }else{
-        http_response_code(404);
-        include '404.html';
+        // http_response_code(404);
+        // include '404.html';
+        throw new \Exception('Page not found', 404);
       }
     }
 
